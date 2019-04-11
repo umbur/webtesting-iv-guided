@@ -3,6 +3,7 @@
 ## components of an api
 
 function name(args) => return something;
+component(data) => UI
 
 - routes/endpoints: url(data) => return response;
 - business logic (validation/data conversion/operations).

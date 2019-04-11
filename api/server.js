@@ -8,6 +8,7 @@ server.use(express.json());
 
 server.get('/', async (req, res) => {
   res.status(200).json({ api: 'up' });
+  // res.status(200).send('hello');
 });
 
 server.get('/hobbits', async (req, res) => {
