@@ -3,19 +3,19 @@ const Hobbits = require('./hobbitsModel.js');
 
 // returns 201
 // insert the hobbit
-// describe('hobbits model', () => {
-//   // beforeEach(async () => {
-//   //   await db('hobbits').truncate();
-//   });
+describe('hobbits model', () => {
+  beforeEach(async () => {
+    await db('hobbits').truncate();
+  });
 
   describe('insert()', () => {
     it('should insert the provided hobbits', async () => {
       await Hobbits.insert({ name: 'agha' });
       await Hobbits.insert({ name: 'beg' });
-      await Hobbits.insert({ name: 'agha2' });
+      await Hobbits.insert({ name: 'agha2' }); 
 
       const hobbits = await db('hobbits');
-      expect(hobbits).toHaveLength(50);
+      expect(hobbits).toHaveLength(3); 
     });   
 
     it('should insert the provided hobbit', async () => {
@@ -26,4 +26,4 @@ const Hobbits = require('./hobbitsModel.js');
       expect(hobbit.name).toBe('sam');
     });
   });
-//});
+});
